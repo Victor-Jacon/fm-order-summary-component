@@ -79,6 +79,14 @@ img {
 
 /* Styling */
 
+:root {
+  --color1-: hsl(225, 100%, 98%);
+  --color2-: hsl(225, 100%, 94%);
+  --color3-: hsl(224, 23%, 55%);
+  --color4-: hsl(245, 75%, 52%);
+  --color5-: hsl(223, 47%, 23%);
+}
+
 body {
   font-family: 'Red Hat Display';
   min-height: 100vh;
@@ -123,8 +131,6 @@ body {
   */
   max-width: 450px;
   overflow: hidden;
-
-  height: 698px; /* dev */
 }
 
 .hero {
@@ -189,16 +195,22 @@ body {
 
 .offer .pricing p {
   font-size: 16px;
-  color: hsl(224, 23%, 55%)
+  color: var(--color3-)
 }
 
 .offer .change-plan {
   text-decoration: underline;
   font-weight: bold;
-  color: rgb(96, 0, 223);
+  color: rgba(96, 0, 223,1);
   font-size: 14px;
 
   margin-right: 24px;
+  cursor: pointer;
+}
+
+.offer .change-plan:hover {
+  text-decoration: none;
+  color: rgba(96, 0, 223,0.5);
 }
 
 .btn-container {
@@ -223,7 +235,11 @@ body {
   font-weight:900;
   font-size: 16px;
   box-shadow: 0px 17px 26px #C7D0F7;
+  cursor: pointer;
+}
 
+.btn-purchase:hover {
+  opacity: 0.8;
 }
 
 .btn-cancel {
@@ -232,7 +248,12 @@ body {
 
   border-radius: 20px;
   background: transparent;
-  color: rgba(0,0,0,0.5);
+  color: var(--color3-);
   font-size: 16px;
   font-weight:900;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  color: var(--color5-);
 }
