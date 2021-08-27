@@ -1,0 +1,175 @@
+/* CSS RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans'
+}
+
+h1,h2,h3,h4,p,a {
+  margin: 0px;
+  outline: none;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* GRID */
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "hero"
+  "order-summary-copy"
+  "offer"
+  "btn-container"
+  ;
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.order-summary-copy {
+  grid-area: order-summary-copy;
+}
+
+.offer {
+  grid-area: offer;
+}
+
+.btn-container {
+  grid-area: btn-container;
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "icon pricing change-plan"
+  ;
+}
+
+.icon {
+  grid-area: icon;
+}
+
+.pricing {
+  grid-area: pricing;
+}
+
+.change-plan {
+  grid-area: change-plan;
+}
+
+/* Styling */
+
+.container {
+  background: url(/images/pattern-background-desktop.svg) no-repeat;
+  background-color: hsl(225, 100%, 94%);
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  background: url(/images/illustration-hero.svg) no-repeat center;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.card {
+  background: white;
+  height: 80%;
+  width: 25%;
+  border-radius: 25px;
+}
+
+.order-summary-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 8px 0 4px 0;
+  background-color: tomato;
+}
+
+.order-summary-copy h1 {
+  color: rgba(0,0,0,0.9);
+
+  justify-self: flex-start;
+}
+
+.order-summary-copy p {
+  color: rgba(0,0,0,0.5);
+  font-size: 16px;
+
+  text-align: center;
+  padding: 8px 110px;
+}
+
+.offer {
+  background: grey;
+  height: fit-content;
+}
+
+.offer img {
+  justify-self: flex-end;
+  height: 40px;
+  padding-right: 16px;
+}
+
+.offer .pricing {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4px;
+  justify-content: center;
+}
+
+.offer h3 {
+  color: rgba(0,0,0,0.9)
+}
+
+.offer p {
+  font-size: 16px;
+}
+
+.change-plan {
+  text-decoration: underline;
+  font-weight: bold;
+  color: rgb(85, 0, 197);
+
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-purchase {
+  background: cornflowerblue;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: rgba(0,0,0,0.5);
+}
