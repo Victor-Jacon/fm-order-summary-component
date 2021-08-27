@@ -171,6 +171,7 @@ body {
   padding: 28px 0px 28px 0px;
   
   border-radius: 10px;
+  background-color: var(--color1-);
 }
 
 .offer img {
